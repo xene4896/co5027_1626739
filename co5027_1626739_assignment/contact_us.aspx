@@ -9,8 +9,8 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     <h2>Contact Us</h2>
     <asp:panel runat="server" ID="pnlCompose">
-        <asp:validationsummary runat="server" CssClass="errorMessages">
-        </asp:validationsummary>
+        <asp:ValidationSummary runat="server" CssClass="errorMessages">
+        </asp:ValidationSummary>
         <div>
             <asp:label id="lblEmail" runat="server" text="Email Address" associatedcontrolid="txtEmail">
             </asp:label>
