@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site_master.Master" AutoEventWireup="true" CodeBehind="product.aspx.cs" Inherits="co5027_1626739_assignment.WebForm2" %>
 
-<!DOCTYPE html>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
     Products -- (online shop)
 </asp:Content>
