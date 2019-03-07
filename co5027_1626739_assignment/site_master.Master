@@ -1,19 +1,56 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="co5027_1626739_assignment.Site1" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site_master.Master.cs" Inherits="co5027_1626739_assignment.Site1" %>
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+<title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
+<link href="~/css/Styles.css" runat="server" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      </style>
+
 </head>
+
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+<div id="page">
+<div id="header">
+<h1><asp:ContentPlaceHolder ID="heading1" runat="server">(online shop)</asp:ContentPlaceHolder></h1>
+
+</div>
+
+<div id="menu">
+<ul>
+<li><a href="~/default.aspx" runat="server">Home</a></li>
+<li><a href="~/about.aspx" runat="server">About</a></li>
+<li><a href="~/product.aspx" runat="server">Products</a></li>
+<li><a href="~/contact.aspx" runat="server">Contact Us</a></li>
+<li><a href="~/login.aspx" runat="server">Members Login</a></li>
+</ul>
+</div>
+
+<div id="content">
+<h2><asp:ContentPlaceHolder ID="heading2" runat="server"></asp:ContentPlaceHolder></h2>
+
+    <asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
+
+</div>
+</div>
+
+    <asp:ContentPlaceHolder ID="GoogleMap" runat="server"></asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="footer" runat="server">
+
+    </asp:ContentPlaceHolder>
 </body>
 </html>
+
