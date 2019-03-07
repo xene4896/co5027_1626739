@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site_master.Master.cs" Inherits="co5027_1626739_assignment.Site1" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -24,8 +25,7 @@
 <body>
 <div id="page">
 <div id="header">
-<h1><asp:ContentPlaceHolder ID="heading1" runat="server">(online shop)</asp:ContentPlaceHolder></h1>
-
+    <asp:Image ID="Image1" ImageUrl="~/images/placeholder.png" runat="server" />
 </div>
 
 <div id="menu">

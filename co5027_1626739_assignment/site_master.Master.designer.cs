@@ -22,13 +22,13 @@ namespace co5027_1626739_assignment {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder title;
         
         /// <summary>
-        /// heading1 control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder heading1;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
         /// heading2 control.

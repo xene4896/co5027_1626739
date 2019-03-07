@@ -1,10 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site_master.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="co5027_1626739_assignment.WebForm1" %>
 
+<!DOCTYPE html>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
     Homepage -- (online shop)
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="heading1" Runat="Server">
-    <asp:Image ID="storeLogo" ImageUrl="~/images/placeholder.png" runat="Server" Width="500px" Height="100px" ></asp:Image>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" Runat="Server">
     Currently Trending
