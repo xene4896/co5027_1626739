@@ -7,27 +7,27 @@
     Currently Trending
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
-    <a href="product.aspx">
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/trending_product01.png" />
+    <a href="product01.aspx">
+        <asp:Image ID="product01" runat="server" ImageUrl="~/images/trending_product01.png" />
     </a>
 
-    <a href="product.aspx">
+    <a href="product02.aspx">
         <asp:Image ID="product02" runat="server" ImageUrl="~/images/trending_product02.png" />
     </a>
 
-    <a href="product.aspx">
+    <a href="product03.aspx">
         <asp:Image ID="product03" runat="server" ImageUrl="~/images/trending_product03.png" />
     </a>
     
-    <a href="product.aspx">
+    <a href="product04.aspx">
         <asp:Image ID="product04" runat="server" ImageUrl="~/images/trending_product04.png" />
     </a>
     
-    <a href="product.aspx">
+    <a href="product05.aspx">
         <asp:Image ID="product05" runat="server" ImageUrl="~/images/trending_product05.png" />
     </a>
     
-    <a href="product.aspx">
+    <a href="product06.aspx">
         <asp:Image ID="product06" runat="server" ImageUrl="~/images/trending_product06.png" />
     </a>
     <br />
