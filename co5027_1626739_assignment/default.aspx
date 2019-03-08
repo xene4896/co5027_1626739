@@ -7,10 +7,15 @@
     Currently Trending
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
-    <form id="form1" runat="server">
-        <asp:Image ID="Image1" ImageUrl="~/images/trending_product.png" runat="server" />
+    <asp:Image ID="product01" runat="server" ImageUrl="~/images/trending_product01.png" />
+    <asp:Image ID="product02" runat="server" ImageUrl="~/images/trending_product02.png" />
+    <asp:Image ID="product03" runat="server" ImageUrl="~/images/trending_product03.png" />
+    <asp:Image ID="product04" runat="server" ImageUrl="~/images/trending_product04.png" />
+    <asp:Image ID="product05" runat="server" ImageUrl="~/images/trending_product05.png" />
+    <asp:Image ID="product06" runat="server" ImageUrl="~/images/trending_product06.png" />
     <br />
-        <a runat="server" href="~/product.aspx">Browse More</a></form>
+    <br />
+    <a runat="server" href="~/product.aspx">Browse More</a>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" Runat="Server">
 </asp:Content>
