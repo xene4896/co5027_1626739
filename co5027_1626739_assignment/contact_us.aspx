@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site_master.Master" AutoEventWireup="true" CodeBehind="contact_us.aspx.cs" Inherits="co5027_1626739_assignment.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
-    Contact Us -- (online shop)
+    Contact Us -- Men's Suits
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" Runat="Server">
     Contact Us
@@ -9,7 +9,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     <h2>Contact Us</h2>
     <asp:panel runat="server" ID="pnlCompose">
-        <asp:ValidationSummary runat="server" CssClass="errorMessages">
+      <asp:ValidationSummary runat="server" CssClass="errorMessages">
         </asp:ValidationSummary>
         <div>
             <asp:label id="lblEmail" runat="server" text="Email Address" associatedcontrolid="txtEmail">

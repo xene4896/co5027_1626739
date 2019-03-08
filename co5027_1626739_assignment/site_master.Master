@@ -25,7 +25,7 @@
 <body>
 <div id="page">
 <div id="header">
-    <asp:Image ID="Image1" ImageUrl="~/images/placeholder.png" runat="server" />
+    <asp:Image ID="Image1" ImageUrl="~/images/store_logo.png" runat="server" />
 </div>
 
 <div id="menu">

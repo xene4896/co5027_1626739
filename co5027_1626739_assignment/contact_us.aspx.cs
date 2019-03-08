@@ -27,7 +27,7 @@ namespace co5027_1626739_assignment
             client.EnableSsl = true;
 
             System.Net.NetworkCredential userpass = new System.Net.NetworkCredential();
-            userpass.UserName = senderEmail; //for this account the username is the email address
+            userpass.UserName = senderEmail;
             userpass.Password = accountPassword;
             client.Credentials = userpass;
 
