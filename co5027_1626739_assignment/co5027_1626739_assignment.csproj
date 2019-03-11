@@ -74,11 +74,7 @@
     <Content Include="product.aspx" />
     <Content Include="contact_us.aspx" />
     <Content Include="product01.aspx" />
-    <Content Include="product02.aspx" />
-    <Content Include="product03.aspx" />
-    <Content Include="product04.aspx" />
-    <Content Include="product05.aspx" />
-    <Content Include="product06.aspx" />
+    <Content Include="register.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -120,40 +116,12 @@
     <Compile Include="product01.aspx.designer.cs">
       <DependentUpon>product01.aspx</DependentUpon>
     </Compile>
-    <Compile Include="product02.aspx.cs">
-      <DependentUpon>product02.aspx</DependentUpon>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="product02.aspx.designer.cs">
-      <DependentUpon>product02.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="product03.aspx.cs">
-      <DependentUpon>product03.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="product03.aspx.designer.cs">
-      <DependentUpon>product03.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="product04.aspx.cs">
-      <DependentUpon>product04.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="product04.aspx.designer.cs">
-      <DependentUpon>product04.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="product05.aspx.cs">
-      <DependentUpon>product05.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="product05.aspx.designer.cs">
-      <DependentUpon>product05.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="product06.aspx.cs">
-      <DependentUpon>product06.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="product06.aspx.designer.cs">
-      <DependentUpon>product06.aspx</DependentUpon>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

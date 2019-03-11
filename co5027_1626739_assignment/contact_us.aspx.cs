@@ -17,6 +17,7 @@ namespace co5027_1626739_assignment
 
         protected void btnContact_Click(object sender, EventArgs e)
         {
+            /**change the following so its not hardcoded: senderemail, message subject**/
             const string senderEmail = "ishtar4896@gmail.com";
             const string accountPassword = "kurosawa_sae12";
             const string recipientEmail = "ichibasato@gmail.com";
