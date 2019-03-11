@@ -14,10 +14,16 @@
             <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ControlToValidate="txtUserName"
                 ErrorMessage="Please enter a user name" ValidationGroup="register">*</asp:RequiredFieldValidator>
         </div>
+            <div>
+            <asp:Label ID="lblEmail" runat="server" Text="Email" AssociatedControlID="txtEmail"></asp:Label>
+            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail"
+                ErrorMessage="Please enter an email" ValidationGroup="register">*</asp:RequiredFieldValidator>
+        </div>
         <div>
             <asp:Label ID="lblPassword" runat="server" Text="Password" AssociatedControlID="txtPassword"></asp:Label>
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword"
+            <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword"
                 ErrorMessage="Please enter a password" ValidationGroup="register">*</asp:RequiredFieldValidator>
         </div>
         <div>
@@ -36,7 +42,7 @@
                 MinimumValue="01/01/1900" Type="Date">*</asp:RangeValidator>
         </div>
         <div>
-            <asp:Button ID="btnRegister" runat="server" Text="Register" ValidationGroup="register" />
+            <asp:Button ID="btnRegister" runat="server" Text="Register" ValidationGroup="register" OnClick="btnRegister_Click" />
         </div>
         <div>
             <h2>
