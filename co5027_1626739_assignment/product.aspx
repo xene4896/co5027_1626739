@@ -5,6 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" Runat="Server">
     Product List
+
+    ((change product01 etc to product, next week do database calling))
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" Runat="Server">
 </asp:Content>

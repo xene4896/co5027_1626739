@@ -18,7 +18,7 @@
         margin: 0;
         padding: 0;
       }
-      </style>
+    </style>
 
 </head>
 
@@ -46,21 +46,8 @@
 </div>
 </div>
 
-    <asp:ContentPlaceHolder ID="GoogleMap" runat="server"></asp:ContentPlaceHolder>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPPQDKWJqFCDVqMZ2ik3AvTp3bx7jtxGQ&callback=initMap"
-    async defer></script>
-    <asp:ContentPlaceHolder ID="footer" runat="server">
+<asp:ContentPlaceHolder ID="GoogleMap" runat="server"></asp:ContentPlaceHolder>
 
-    </asp:ContentPlaceHolder>
 </body>
 </html>
 

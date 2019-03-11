@@ -9,8 +9,9 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     <h2>Contact Us</h2>
     <asp:panel runat="server" ID="pnlCompose">
-      <asp:ValidationSummary runat="server" CssClass="errorMessages">
-        </asp:ValidationSummary>
+        <form runat="server">
+            <asp:ValidationSummary runat="server" CssClass="errorMessages">
+            </asp:ValidationSummary>
         <div>
             <asp:label id="lblEmail" runat="server" text="Email Address" associatedcontrolid="txtEmail">
             </asp:label>
@@ -53,11 +54,27 @@
         <div>
             <asp:button id="btnContact" runat="server" text="Send" OnClick="btnContact_Click" />
         </div>
+            </form>
     </asp:panel>
-
+    
 
     <asp:Panel ID="pnlSent" runat="server" visible="false">
     <p>Your message has been sent</p>
     </asp:Panel>
+    </asp:content>
+
+    <asp:Content ID="content5" ContentPlaceHolderID="GoogleMap" runat="server">
+        <div id="map"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 8
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPPQDKWJqFCDVqMZ2ik3AvTp3bx7jtxGQ&callback=initMap"
+        async defer></script>
 </asp:Content>
 
