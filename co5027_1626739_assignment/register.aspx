@@ -62,7 +62,9 @@
                     ErrorMessage="Please enter a password" ControlToValidate="txtLogInPassword" ValidationGroup="login" runat="server" >*</asp:RequiredFieldValidator>
             </div>
             <div>
-                <asp:Button ID="btnLogin" runat="server" Text="Login" ValidationGroup="login" />
+                <asp:Button ID="btnLogin" runat="server" Text="Login" ValidationGroup="login" OnClick="btnLogin_Click" />
+                <br />
+                <asp:Literal ID="litLoginError" runat="server"></asp:Literal>
             </div>
         </div>
     </form>
