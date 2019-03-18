@@ -36,11 +36,11 @@ namespace co5027_1626739_assignment
         {
             var identityDbContext = new IdentityDbContext("IdentityConnectionString");
             var userStore = new UserStore<IdentityUser>(identityDbContext);
-            var manager = new UserManager<IdentityUser>(userStore);
-            var user = manager.Find(txtLogInUser.Text, txtLogInPassword.Text);
+            var userManager = new UserManager<IdentityUser>(userStore);
+            var user = userManager.Find(txtLogInUser.Text, txtLogInPassword.Text);
             if (user != null)
             {
-                LogUserIn(manager, user);
+                LogUserIn(userManager, user);
                 litLoginError.Text = "Login successful.";
             }
             else
@@ -49,10 +49,10 @@ namespace co5027_1626739_assignment
             }
         }
 
-        private void LogUserIn(UserManager<IdentityUser> manager, IdentityUser user)
+        private void LogUserIn(UserManager<IdentityUser> userManager, IdentityUser user)
         {
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-            var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+            var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
             authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
         }
     }
