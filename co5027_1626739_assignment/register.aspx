@@ -6,6 +6,7 @@
     Register
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
+    <form id="form1" runat="server">
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="register"
             CssClass="errorMessages" />
         <div>
@@ -43,6 +44,8 @@
         </div>
         <div>
             <asp:Button ID="btnRegister" runat="server" Text="Register" ValidationGroup="register" OnClick="btnRegister_Click" />
+            <br />
+            <asp:Literal ID="litRegisterError" runat="server"></asp:Literal>
         </div>
         <div>
             <h2>
@@ -62,6 +65,7 @@
                 <asp:Button ID="btnLogin" runat="server" Text="Login" ValidationGroup="login" />
             </div>
         </div>
+    </form>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>

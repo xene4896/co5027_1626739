@@ -24,7 +24,7 @@ namespace co5027_1626739_assignment
             var user = new IdentityUser() { UserName = txtUserName.Text, Email = txtEmail.Text };
             IdentityResult result = manager.Create(user, txtPassword.Text);
             if (result.Succeeded){
-                //redirect them to the login page 
+                litRegisterError.Text = "Registration success.";
             }
             else{
                 litRegisterError.Text = "An error has occured: " + result.Errors.FirstOrDefault();
