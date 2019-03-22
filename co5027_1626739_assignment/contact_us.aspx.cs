@@ -34,7 +34,7 @@ namespace co5027_1626739_assignment
 
             MailMessage msg = new MailMessage(senderEmail, recipientEmail);
             msg.Subject = "A new email from the website";
-            msg.Body = txtBody.Text;
+            msg.Body = "Subject: " + txtSubject.Text + " \n" + "Email: " + txtEmail.Text + " \n" + txtBody.Text;
 
             client.Send(msg);
             txtBody.Text = "";

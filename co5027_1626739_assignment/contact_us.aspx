@@ -7,7 +7,6 @@
     Contact Us
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
-    <h2>Contact Us</h2>
     <asp:panel runat="server" ID="pnlCompose">
         <form runat="server">
             <asp:ValidationSummary runat="server" CssClass="errorMessages">
@@ -69,9 +68,9 @@
           var map;
           function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: -34.397, lng: 150.644},
-              zoom: 8
-            });
+              center: {lat: 4.60637, lng: 114.3247604},
+              zoom: 17
+              });
           }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPPQDKWJqFCDVqMZ2ik3AvTp3bx7jtxGQ&callback=initMap"
