@@ -22,10 +22,20 @@ namespace co5027_1626739_assignment
             var identityDbContext = new IdentityDbContext("IdentityConnectionString");
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var userManager = new UserManager<IdentityUser>(userStore);
+
+            var roleStore = new RoleStore<IdentityRole>(identityDbContext);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+            IdentityRole adminRole = new IdentityRole("admin");
+            roleManager.Create(adminRole);
+
             var user = new IdentityUser() { UserName = txtUserName.Text, Email = txtEmail.Text };
             IdentityResult result = userManager.Create(user, txtPassword.Text);
             if (result.Succeeded){
-                litRegisterError.Text = "Registration success.";
+                {
+                    userManager.AddToRole(user.Id, "user");
+                    userManager.Update(user);
+                    litRegisterError.Text = "Registration success.";
+                }
             }
             else{
                 litRegisterError.Text = "An error has occured: " + result.Errors.FirstOrDefault();
@@ -42,6 +52,7 @@ namespace co5027_1626739_assignment
             {
                 LogUserIn(userManager, user);
                 litLoginError.Text = "Login successful.";
+                Page.Response.Redirect("~/default.aspx");
             }
             else
             {

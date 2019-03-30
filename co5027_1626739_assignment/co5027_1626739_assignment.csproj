@@ -112,6 +112,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\default.aspx" />
+    <Content Include="Admin\add_product.aspx" />
     <Content Include="Global.asax" />
     <Content Include="site_css.css" />
     <Content Include="Web.config" />
@@ -122,6 +124,20 @@
     <Content Include="register.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add_product.aspx.cs">
+      <DependentUpon>add_product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add_product.aspx.designer.cs">
+      <DependentUpon>add_product.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,6 +187,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Web.config" />
     <None Include="packages.config" />
     <Content Include="site_master.Master" />
     <None Include="Web.Debug.config">
