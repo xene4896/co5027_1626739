@@ -75,30 +75,14 @@
                 productDesc:
                 <asp:Label ID="productDescLabel" runat="server" Text='<%# Bind("productDesc") %>' />
                 <br />
-                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
-                &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
-                &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
             </ItemTemplate>
         </asp:FormView>
-        <asp:SqlDataSource ID="FormDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" DeleteCommand="DELETE FROM [tblProduct] WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL))" InsertCommand="INSERT INTO [tblProduct] ([productID], [productName], [productDesc]) VALUES (@productID, @productName, @productDesc)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tblProduct]" UpdateCommand="UPDATE [tblProduct] SET [productName] = @productName, [productDesc] = @productDesc WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL))">
-            <DeleteParameters>
-                <asp:Parameter Name="original_productID" Type="Int32" />
-                <asp:Parameter Name="original_productName" Type="String" />
-                <asp:Parameter Name="original_productDesc" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="productID" Type="Int32" />
-                <asp:Parameter Name="productName" Type="String" />
-                <asp:Parameter Name="productDesc" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="productName" Type="String" />
-                <asp:Parameter Name="productDesc" Type="String" />
-                <asp:Parameter Name="original_productID" Type="Int32" />
-                <asp:Parameter Name="original_productName" Type="String" />
-                <asp:Parameter Name="original_productDesc" Type="String" />
-            </UpdateParameters>
+        <asp:SqlDataSource ID="FormDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tblProduct] WHERE ([productID] = @productID)">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="productID" QueryStringField="ID" Type="Int32" />
+            </SelectParameters>
         </asp:SqlDataSource>
+        <br />
     </form>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" Runat="Server">
