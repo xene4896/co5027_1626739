@@ -122,6 +122,7 @@
     <Content Include="contact_us.aspx" />
     <Content Include="product01.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="UploadImage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\default.aspx.cs">
@@ -185,6 +186,13 @@
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UploadImage.aspx.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadImage.aspx.designer.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Web.config" />

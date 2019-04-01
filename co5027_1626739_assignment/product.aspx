@@ -8,12 +8,13 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     <form id="form1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productID" DataSourceID="ProductDataStore">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productID" DataSourceID="ProductDataStore" style="margin-right: 0px" Width="446px">
         <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="productID" HeaderText="productID" ReadOnly="True" SortExpression="productID" />
             <asp:BoundField DataField="productName" HeaderText="productName" SortExpression="productName" />
             <asp:BoundField DataField="productDesc" HeaderText="productDesc" SortExpression="productDesc" />
+            <asp:HyperLinkField DataNavigateUrlFields="productID" DataNavigateUrlFormatString="UploadImage.aspx?id={0}" InsertVisible="False" Text="Set Image" />
         </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="ProductDataStore" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" DeleteCommand="DELETE FROM [tblProduct] WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL))" InsertCommand="INSERT INTO [tblProduct] ([productID], [productName], [productDesc]) VALUES (@productID, @productName, @productDesc)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tblProduct]" UpdateCommand="UPDATE [tblProduct] SET [productName] = @productName, [productDesc] = @productDesc WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL))">
