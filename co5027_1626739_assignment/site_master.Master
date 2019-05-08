@@ -25,7 +25,7 @@
 <body>
 <div id="page">
 <div id="header">
-    <asp:Image ID="Image1" ImageUrl="~/images/store_logo.png" runat="server" />
+    <asp:Image ID="Image1" ImageUrl="~/ProductImages/store_logo.png" runat="server" />
 </div>
 
 <div id="menu">
@@ -34,7 +34,7 @@
 <li><a href="~/about.aspx" runat="server">About</a></li>
 <li><a href="~/product.aspx" runat="server">Products</a></li>
 <li><a href="~/contact.aspx" runat="server">Contact Us</a></li>
-<li><a href="~/register.aspx" runat="server">Login</a></li>
+<li><a href="~/login.aspx" runat="server">Login</a></li>
 </ul>
 </div>
 
@@ -51,6 +51,7 @@
 </body>
 </html>
 
+<br /><br /><br />
 <footer>
     <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |
     <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> |

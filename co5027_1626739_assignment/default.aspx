@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     <form id="form1" runat="server">
-    <a href="product01.aspx">
+    <a href="product.aspx">
         <asp:Image ID="product01" runat="server" ImageUrl="~/ProductImages/trending_product01.png" />
     </a>
 
@@ -34,12 +34,13 @@
     <br />
     <br />
     <a runat="server" href="~/product.aspx">Browse More</a><br />
-        <asp:Repeater ID="rptProduct" runat="server" DataSourceID="ProductDataSource">
+
+       <asp:Repeater ID="rptProduct" runat="server" DataSourceID="ProductDataSource">
             <HeaderTemplate></HeaderTemplate>
                 <ItemTemplate>
                     <<li>
                         <a href="<%# Eval("ProductID", "product.aspx?productID={0}") %>
-                            <%# Eval("productName") %>"</a>
+                            <%# Eval("productName") %>"></a>
                      </li>
                 </ItemTemplate>
             <FooterTemplate></FooterTemplate>

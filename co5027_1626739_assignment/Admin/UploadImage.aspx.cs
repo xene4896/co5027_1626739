@@ -14,7 +14,7 @@ namespace co5027_1626739_assignment
             string productID = Request.QueryString["ID"];
             string filename = productID + ".jpg";
 
-            current_image.ImageUrl = "~/ProductImages/" + filename);
+            current_image.ImageUrl = "~/ProductImages/" + filename;
         }
 
         protected void upload_image_Click(object sender, EventArgs e)
