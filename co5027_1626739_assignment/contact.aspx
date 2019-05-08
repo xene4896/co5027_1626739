@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site_master.Master" AutoEventWireup="true" CodeBehind="contact_us.aspx.cs" Inherits="co5027_1626739_assignment.WebForm3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site_master.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="co5027_1626739_assignment.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" Runat="Server">
     Contact Us -- Men's Suits

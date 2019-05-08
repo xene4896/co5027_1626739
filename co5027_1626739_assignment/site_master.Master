@@ -33,7 +33,7 @@
 <li><a href="~/default.aspx" runat="server">Home</a></li>
 <li><a href="~/about.aspx" runat="server">About</a></li>
 <li><a href="~/product.aspx" runat="server">Products</a></li>
-<li><a href="~/contact_us.aspx" runat="server">Contact Us</a></li>
+<li><a href="~/contact.aspx" runat="server">Contact Us</a></li>
 <li><a href="~/register.aspx" runat="server">Login</a></li>
 </ul>
 </div>
@@ -50,4 +50,10 @@
 
 </body>
 </html>
+
+<footer>
+    <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> |
+    <a href="Admin/">Admin</a>
+</footer>
 

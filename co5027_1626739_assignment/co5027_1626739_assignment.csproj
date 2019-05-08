@@ -87,6 +87,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
@@ -114,12 +115,23 @@
   <ItemGroup>
     <Content Include="Admin\default.aspx" />
     <Content Include="Admin\add_product.aspx" />
+    <Content Include="Admin\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Admin\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Admin\table_add.aspx" />
     <Content Include="Global.asax" />
     <Content Include="site_css.css" />
     <Content Include="Web.config" />
     <Content Include="default.aspx" />
     <Content Include="product.aspx" />
-    <Content Include="contact_us.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="product01.aspx" />
     <Content Include="register.aspx" />
     <Content Include="UploadImage.aspx" />
@@ -138,6 +150,31 @@
     </Compile>
     <Compile Include="Admin\add_product.aspx.designer.cs">
       <DependentUpon>add_product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tblProduct.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\table_add.aspx.cs">
+      <DependentUpon>table_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\table_add.aspx.designer.cs">
+      <DependentUpon>table_add.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,12 +201,12 @@
     <Compile Include="product.aspx.designer.cs">
       <DependentUpon>product.aspx</DependentUpon>
     </Compile>
-    <Compile Include="contact_us.aspx.cs">
-      <DependentUpon>contact_us.aspx</DependentUpon>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="contact_us.aspx.designer.cs">
-      <DependentUpon>contact_us.aspx</DependentUpon>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="product01.aspx.cs">
       <DependentUpon>product01.aspx</DependentUpon>
@@ -196,6 +233,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Web.config" />
+    <EntityDeploy Include="Admin\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Admin\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="site_master.Master" />
     <None Include="Web.Debug.config">
@@ -208,6 +252,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
