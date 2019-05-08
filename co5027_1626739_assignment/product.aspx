@@ -9,7 +9,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     
     <form id="form1" runat="server">
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="productID" DataSourceID="ProductDataSource">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="productID" DataSourceID="ProductsDataSource">
             <EditItemTemplate>
                 productID:
                 <asp:Label ID="productIDLabel1" runat="server" Text='<%# Eval("productID") %>' />
@@ -67,13 +67,14 @@
 
             </ItemTemplate>
         </asp:FormView>
-        <asp:SqlDataSource ID="ProductDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT * FROM [tblProduct] WHERE ([productID] = @productID)">
+        <asp:SqlDataSource ID="ProductsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT * FROM [tblProduct] WHERE ([productID] = @productID)">
             <SelectParameters>
                 <asp:QueryStringParameter Name="productID" QueryStringField="productID" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
-        All other products:<asp:Repeater ID="rptProduct" runat="server" DataSourceID="ProductDataSource">
+        All other products:<br />
+        <asp:Repeater ID="rptProduct" runat="server" DataSourceID="ProductListDataSource">
             <HeaderTemplate>
                 <ul>
             </HeaderTemplate>
@@ -88,7 +89,8 @@
                 </ul>
             </FooterTemplate>
         </asp:Repeater>
-        </form>
+        <asp:SqlDataSource ID="ProductListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT [productID], [productName] FROM [tblProduct]"></asp:SqlDataSource>
+    </form>
     
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" Runat="Server">

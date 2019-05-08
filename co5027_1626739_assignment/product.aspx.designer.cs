@@ -31,13 +31,13 @@ namespace co5027_1626739_assignment {
         protected global::System.Web.UI.WebControls.FormView FormView1;
         
         /// <summary>
-        /// ProductDataSource control.
+        /// ProductsDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ProductDataSource;
+        protected global::System.Web.UI.WebControls.SqlDataSource ProductsDataSource;
         
         /// <summary>
         /// rptProduct control.
@@ -47,5 +47,14 @@ namespace co5027_1626739_assignment {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptProduct;
+        
+        /// <summary>
+        /// ProductListDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource ProductListDataSource;
     }
 }
