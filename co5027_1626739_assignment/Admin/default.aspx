@@ -7,13 +7,13 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     Edit Products:
-    <form id="form1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productID" DataSourceID="ProductDataStore" style="margin-right: 0px" Width="776px" Height="158px">
+    <form id="form1" runat="server" style="height: 425px; margin-top: 0px">
+    <asp:GridView ID="adminedit" runat="server" AutoGenerateColumns="False" DataKeyNames="productID" DataSourceID="ProductDataStore" style="margin-right: 0px; top: -477px; left: 128px; width: 520px;" Height="158px">
         <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="productID" HeaderText="ID" ReadOnly="True" SortExpression="productID" />
             <asp:BoundField DataField="productName" HeaderText="Name" SortExpression="productName" />
-            <asp:BoundField DataField="productDesc" HeaderText="Desc" SortExpression="productDesc" />
+            <asp:BoundField DataField="productDesc" HeaderText="Desciption" SortExpression="productDesc" />
             <asp:BoundField DataField="productPrice" HeaderText="Price" SortExpression="productPrice" />
             <asp:BoundField DataField="productStock" HeaderText="Stock" SortExpression="productStock" />
             <asp:HyperLinkField HeaderText="Image" DataNavigateUrlFields="productID" DataNavigateUrlFormatString="UploadImage.aspx?id={0}" InsertVisible="False" Text="Set Image" />
@@ -48,7 +48,7 @@
         </asp:SqlDataSource>
         <br />
         Add New Products:<br />
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="productID" DataSourceID="FormDataSource" DefaultMode="Insert">
+        <asp:FormView ID="adminadd" runat="server" DataKeyNames="productID" DataSourceID="FormDataSource" DefaultMode="Insert">
             <EditItemTemplate>
                 productID:
                 <asp:Label ID="productIDLabel1" runat="server" Text='<%# Eval("productID") %>' />

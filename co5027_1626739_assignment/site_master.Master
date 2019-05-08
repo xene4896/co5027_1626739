@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
 <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
-<link href="~/css/Styles.css" runat="server" rel="stylesheet" type="text/css">
+<link href="~/site_css.css" runat="server" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
 <body>
 <div id="page">
 <div id="header">
-    <asp:Image ID="Image1" ImageUrl="~/ProductImages/store_logo.png" runat="server" />
+    <asp:Image ID="store_logo" ImageUrl="~/img/logo.png" runat="server" />
 </div>
 
 <div id="menu">
