@@ -7,9 +7,11 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     <asp:Image ID="current_image" runat="server" />
     <br /><br />
-    <asp:FileUpload ID="image_uploader" runat="server" />
+    <form id="uploader" runat="server">
+        <asp:FileUpload ID="image_uploader" runat="server" />
     <br /><br />
-    <asp:Button ID="upload_image" runat="server" Text="Upload" OnClick="upload_image_Click" />
+        <asp:Button ID="upload_image" runat="server" Text="Upload" OnClick="upload_image_Click" />
+    </form>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>

@@ -7,32 +7,42 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     Edit Products:
     <form id="form1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productID" DataSourceID="ProductDataStore" style="margin-right: 0px" Width="446px">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productID" DataSourceID="ProductDataStore" style="margin-right: 0px" Width="776px" Height="158px">
         <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-            <asp:BoundField DataField="productID" HeaderText="productID" ReadOnly="True" SortExpression="productID" />
-            <asp:BoundField DataField="productName" HeaderText="productName" SortExpression="productName" />
-            <asp:BoundField DataField="productDesc" HeaderText="productDesc" SortExpression="productDesc" />
-            <asp:HyperLinkField DataNavigateUrlFields="productID" DataNavigateUrlFormatString="UploadImage.aspx?id={0}" InsertVisible="False" Text="Set Image" />
+            <asp:BoundField DataField="productID" HeaderText="ID" ReadOnly="True" SortExpression="productID" />
+            <asp:BoundField DataField="productName" HeaderText="Name" SortExpression="productName" />
+            <asp:BoundField DataField="productDesc" HeaderText="Desc" SortExpression="productDesc" />
+            <asp:BoundField DataField="productPrice" HeaderText="Price" SortExpression="productPrice" />
+            <asp:BoundField DataField="productStock" HeaderText="Stock" SortExpression="productStock" />
+            <asp:HyperLinkField HeaderText="Image" DataNavigateUrlFields="productID" DataNavigateUrlFormatString="UploadImage.aspx?id={0}" InsertVisible="False" Text="Set Image" />
         </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="ProductDataStore" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" DeleteCommand="DELETE FROM [tblProduct] WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL))" InsertCommand="INSERT INTO [tblProduct] ([productID], [productName], [productDesc]) VALUES (@productID, @productName, @productDesc)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tblProduct]" UpdateCommand="UPDATE [tblProduct] SET [productName] = @productName, [productDesc] = @productDesc WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL))">
+        <asp:SqlDataSource ID="ProductDataStore" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" DeleteCommand="DELETE FROM [tblProduct] WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL)) AND (([productPrice] = @original_productPrice) OR ([productPrice] IS NULL AND @original_productPrice IS NULL)) AND (([productStock] = @original_productStock) OR ([productStock] IS NULL AND @original_productStock IS NULL))" InsertCommand="INSERT INTO [tblProduct] ([productID], [productName], [productDesc], [productPrice], [productStock]) VALUES (@productID, @productName, @productDesc, @productPrice, @productStock)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tblProduct]" UpdateCommand="UPDATE [tblProduct] SET [productName] = @productName, [productDesc] = @productDesc, [productPrice] = @productPrice, [productStock] = @productStock WHERE [productID] = @original_productID AND [productName] = @original_productName AND (([productDesc] = @original_productDesc) OR ([productDesc] IS NULL AND @original_productDesc IS NULL)) AND (([productPrice] = @original_productPrice) OR ([productPrice] IS NULL AND @original_productPrice IS NULL)) AND (([productStock] = @original_productStock) OR ([productStock] IS NULL AND @original_productStock IS NULL))">
             <DeleteParameters>
                 <asp:Parameter Name="original_productID" Type="Int32" />
                 <asp:Parameter Name="original_productName" Type="String" />
                 <asp:Parameter Name="original_productDesc" Type="String" />
+                <asp:Parameter Name="original_productPrice" Type="String" />
+                <asp:Parameter Name="original_productStock" Type="Int32" />
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="productID" Type="Int32" />
                 <asp:Parameter Name="productName" Type="String" />
                 <asp:Parameter Name="productDesc" Type="String" />
+                <asp:Parameter Name="productPrice" Type="String" />
+                <asp:Parameter Name="productStock" Type="Int32" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="productName" Type="String" />
                 <asp:Parameter Name="productDesc" Type="String" />
+                <asp:Parameter Name="productPrice" Type="String" />
+                <asp:Parameter Name="productStock" Type="Int32" />
                 <asp:Parameter Name="original_productID" Type="Int32" />
                 <asp:Parameter Name="original_productName" Type="String" />
                 <asp:Parameter Name="original_productDesc" Type="String" />
+                <asp:Parameter Name="original_productPrice" Type="String" />
+                <asp:Parameter Name="original_productStock" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />

@@ -22,6 +22,15 @@ namespace co5027_1626739_assignment {
         protected global::System.Web.UI.WebControls.Image current_image;
         
         /// <summary>
+        /// uploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm uploader;
+        
+        /// <summary>
         /// image_uploader control.
         /// </summary>
         /// <remarks>

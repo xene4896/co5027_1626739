@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="databaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblProduct">
           <Key>
             <PropertyRef Name="productID" />
@@ -12,15 +12,17 @@
           <Property Name="productID" Type="int" Nullable="false" />
           <Property Name="productName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="productDesc" Type="text" />
+          <Property Name="productPrice" Type="nvarchar" MaxLength="50" />
+          <Property Name="productStock" Type="int" />
         </EntityType>
-        <EntityContainer Name="DatabaseModelStoreContainer">
+        <EntityContainer Name="databaseModelStoreContainer">
           <EntitySet Name="tblProduct" EntityType="Self.tblProduct" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="databaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="tblProduct">
           <Key>
             <PropertyRef Name="productID" />
@@ -28,8 +30,10 @@
           <Property Name="productID" Type="Int32" Nullable="false" />
           <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="productDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="productPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="productStock" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_1626739_co5027_asgEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
         </EntityContainer>
       </Schema>
@@ -37,13 +41,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+        <EntityContainerMapping StorageEntityContainer="databaseModelStoreContainer" CdmEntityContainer="db_1626739_co5027_asgEntities">
           <EntitySetMapping Name="tblProducts">
-            <EntityTypeMapping TypeName="DatabaseModel.tblProduct">
+            <EntityTypeMapping TypeName="databaseModel.tblProduct">
               <MappingFragment StoreEntitySet="tblProduct">
                 <ScalarProperty Name="productID" ColumnName="productID" />
                 <ScalarProperty Name="productName" ColumnName="productName" />
                 <ScalarProperty Name="productDesc" ColumnName="productDesc" />
+                <ScalarProperty Name="productPrice" ColumnName="productPrice" />
+                <ScalarProperty Name="productStock" ColumnName="productStock" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

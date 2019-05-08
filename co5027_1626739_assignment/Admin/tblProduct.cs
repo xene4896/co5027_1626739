@@ -17,5 +17,7 @@ namespace co5027_1626739_assignment.Admin
         public int productID { get; set; }
         public string productName { get; set; }
         public string productDesc { get; set; }
+        public string productPrice { get; set; }
+        public Nullable<int> productStock { get; set; }
     }
 }
