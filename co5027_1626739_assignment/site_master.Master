@@ -9,16 +9,6 @@
 
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
-      #map {
-        height: 100%;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
 
 </head>
 
@@ -31,10 +21,9 @@
 <div id="menu">
 <ul>
 <li><a href="~/default.aspx" runat="server">Home</a></li>
-<li><a href="~/about.aspx" runat="server">About</a></li>
 <li><a href="~/product.aspx" runat="server">Products</a></li>
 <li><a href="~/contact.aspx" runat="server">Contact Us</a></li>
-<li><a href="~/login.aspx" runat="server">Login</a></li>
+<li><a href="~/login.aspx" runat="server">Login/Register</a></li>
 </ul>
 </div>
 

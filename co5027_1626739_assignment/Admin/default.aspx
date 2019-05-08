@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site_master.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="co5027_1626739_assignment.Admin.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Admin Panel -- Men&#39;s Suits
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading2" runat="server">
-    Admin Panel -- Men&#39;s Suits
+    Admin Panel
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     Edit Products:

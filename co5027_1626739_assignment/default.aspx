@@ -4,7 +4,7 @@
     Homepage -- Men's Suits
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" Runat="Server">
-    Currently In Store -- Men&#39;s Suits 
+    Currently In Store
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     <form id="form1" runat="server">

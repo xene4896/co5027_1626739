@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site_master.Master" AutoEventWireup="true" CodeBehind="UploadImage.aspx.cs" Inherits="co5027_1626739_assignment.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Image Uploader -- Men's Suits
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading2" runat="server">
-    Image Uploader -- Men&#39;s Suits 
+    Image Uploader
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     <asp:Image ID="current_image" runat="server" />

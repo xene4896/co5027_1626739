@@ -4,7 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading2" runat="server">
     Register
-    -- Men&#39;s Suits 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     <form id="form1" runat="server">

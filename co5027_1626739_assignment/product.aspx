@@ -4,11 +4,12 @@
     Products -- Men's Suits
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" Runat="Server">
-    Product List
+    Products
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="maincontent" Runat="Server">
     
     <form id="form1" runat="server">
+        <br />
         <asp:FormView ID="FormView1" runat="server" DataKeyNames="productID" DataSourceID="ProductsDataSource">
             <EditItemTemplate>
                 productID:
@@ -49,19 +50,19 @@
                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </InsertItemTemplate>
             <ItemTemplate>
-                productID:
+                ID:
                 <asp:Label ID="productIDLabel" runat="server" Text='<%# Eval("productID") %>' />
                 <br />
-                productName:
+                Name:
                 <asp:Label ID="productNameLabel" runat="server" Text='<%# Bind("productName") %>' />
                 <br />
-                productDesc:
+                Description:
                 <asp:Label ID="productDescLabel" runat="server" Text='<%# Bind("productDesc") %>' />
                 <br />
-                productPrice:
+                Price:
                 <asp:Label ID="productPriceLabel" runat="server" Text='<%# Bind("productPrice") %>' />
                 <br />
-                productStock:
+                Current Stock:
                 <asp:Label ID="productStockLabel" runat="server" Text='<%# Bind("productStock") %>' />
                 <br />
 
